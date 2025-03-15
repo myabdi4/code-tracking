@@ -9,8 +9,9 @@ import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
 import DropdownComponent from "./DropdownComponent";
 
-const Navbar = () => {
-  //coment here
+
+const Navbar = ({ setCategory }) => {
+  //coment here 
   const navigate = useNavigate();
   const navRef = useRef();
 
@@ -35,7 +36,7 @@ const Navbar = () => {
         <img src={navbar_logo} alt="" />
         <ul>
           <li onClick={() => handleNavigation("/")}>Home</li>
-          {/* <li onClick={() => handleNavigation("/blogs")}>Blogs</li> */}
+          <li onClick={() => handleNavigation("/blogs")}>Blogs</li>
           <li onClick={() => handleNavigation("/projects")}>Projects</li>
         </ul>
       </div>
@@ -44,6 +45,7 @@ const Navbar = () => {
         <img src={search_icon} alt="" className="icons" />
         <img src={bell_icon} alt="" className="icons" />
       </div>
+
     </div>
   );
 };
