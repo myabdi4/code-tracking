@@ -1,12 +1,10 @@
 // Layout.js
-import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
     </>
   );
 };
